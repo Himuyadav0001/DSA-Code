@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+int main()
+{
+    string s;
+    cin>>s;
+     string seqarr[]={"2","22","222","3", "33","333","4","44","444","5","55","555","6","66","666","7","77","777","8","88","888","9","99","999","9999"};
+     int n=s.length();
+     string ans="";
+     for(int i=0; i<n; i++)
+     {
+        if(s[i]==' ')
+        {
+            ans+="0";
+        }
+        else
+        {
+            int val=s[i]-'A';
+            ans=ans+seqarr[val];
+        }
+     }
+     cout<<ans<<endl;
+}
